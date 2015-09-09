@@ -1,0 +1,20 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.michielbowijk.hangman.GameActivity">
+
+    <item
+        android:id="@+id/action_new_game"
+        android:title="@string/action_new_game"
+        android:orderInCategory="100" />
+
+    <item
+        android:id="@+id/action_how_to_play"
+        android:title="@string/action_how_to_play"
+        android:orderInCategory="200" />
+
+    <item
+        android:id="@+id/action_acknowledgements"
+        android:title="@string/action_acknowledgements"
+        android:orderInCategory="300" />
+</menu>
