@@ -19,7 +19,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_weight="0.5">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,7 +51,7 @@
             android:id="@+id/gallow_image"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:layout_gravity="end" />
+            android:layout_weight="0.4" />
 
     </LinearLayout>
 
@@ -64,33 +65,41 @@
         android:layout_marginTop="10dp"
         android:id="@+id/game_word"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <EditText
-            android:layout_width="150dp"
-            android:id="@+id/input_field"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/guess_hint"
-            android:inputType="text"
-            android:maxLength="1"
-            android:fontFamily="sans-serif-light"
-            android:layout_marginTop="20dp"/>
+            android:orientation="horizontal"
+            android:weightSum="1">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:fontFamily="sans-serif-light"
-            android:text="@string/guess_button"
-            android:onClick="processGuess"
-            android:id="@+id/guess_button"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"/>
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/input_field"
+                android:layout_height="wrap_content"
+                android:hint="@string/guess_hint"
+                android:inputType="text"
+                android:maxLength="1"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0.55"/>
 
-    </LinearLayout>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/guess_button"
+                android:layout_weight="0.45"
+                android:onClick="processGuess"
+                android:id="@+id/guess_button"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"/>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
